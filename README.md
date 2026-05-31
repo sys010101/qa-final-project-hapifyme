@@ -2,7 +2,7 @@
 
 ![HapifyMe Final Tests](https://github.com/sys010101/qa-final-project-hapifyme/actions/workflows/test.yml/badge.svg)
 
-Hybrid QA automation framework for [HapifyMe](https://test.hapifyme.com) using Java, Maven, Selenide/Selenium, Cucumber, JUnit 4, RestAssured, and GitHub Actions.
+Hybrid QA automation framework for [HapifyMe](https://apps.qualiadept.eu/hapifyme) using Java, Maven, Selenide/Selenium, Cucumber, JUnit 4, RestAssured, and GitHub Actions.
 
 ## Project Scope
 
@@ -32,7 +32,7 @@ mvn test
 Run against the required final project environment explicitly:
 
 ```bash
-mvn test -Dhapifyme.baseUrl=https://test.hapifyme.com -Dselenide.headless=true
+mvn test -Dhapifyme.baseUrl=https://apps.qualiadept.eu/hapifyme -Dselenide.headless=true
 ```
 
 Run with a visible browser for debugging:
@@ -52,7 +52,7 @@ The GitHub Actions workflow runs on every push and pull request to `main`:
 The pipeline executes:
 
 ```bash
-mvn -B test --no-transfer-progress -Dhapifyme.baseUrl=https://test.hapifyme.com -Dselenide.headless=true
+mvn -B test --no-transfer-progress -Dhapifyme.baseUrl=https://apps.qualiadept.eu/hapifyme -Dselenide.headless=true
 ```
 
 It uploads these artifacts even when a test fails:
@@ -83,4 +83,4 @@ A relevant product risk is that the registration and login flows are tightly cou
 
 ## Expected Result
 
-A successful run should produce passing Maven tests and downloadable CI artifacts in the GitHub Actions run page. If `https://test.hapifyme.com` is temporarily unavailable or cannot be resolved by DNS, the external UI/API tests are marked as skipped instead of failing the CI infrastructure check.
+A successful run should produce passing Maven tests and downloadable CI artifacts in the GitHub Actions run page.

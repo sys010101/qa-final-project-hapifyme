@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -64,7 +64,7 @@
                         <include>**/*Test.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <hapifyme.baseUrl>https://test.hapifyme.com</hapifyme.baseUrl>
+                        <hapifyme.baseUrl>https://apps.qualiadept.eu/hapifyme</hapifyme.baseUrl>
                         <selenide.headless>true</selenide.headless>
                     </systemPropertyVariables>
                 </configuration>

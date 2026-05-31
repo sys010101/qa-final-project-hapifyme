@@ -4,7 +4,7 @@
 - [x] Maven project is present at the repository root.
 - [x] UI automation uses Selenide/Selenium.
 - [x] API automation uses RestAssured.
-- [x] Tests target `https://test.hapifyme.com`.
+- [x] Tests target `https://apps.qualiadept.eu/hapifyme`.
 - [x] Login scenarios are included.
 - [x] Register scenario is included.
 - [x] Data Driven Testing is included through Cucumber Data Table and Scenario Outline examples.

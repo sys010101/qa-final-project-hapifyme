@@ -2,11 +2,9 @@ package com.qaschool.hapifyme.stepdefinitions;
 
 import com.codeborne.selenide.Configuration;
 import com.qaschool.hapifyme.context.TestContext;
-import com.qaschool.hapifyme.support.EnvironmentChecks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.junit.Assume;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.screenshot;
@@ -18,11 +16,7 @@ public class Hooks {
     public void setUp() {
         TestContext.reset();
         Configuration.browser = "chrome";
-        Configuration.baseUrl = System.getProperty("hapifyme.baseUrl", "https://test.hapifyme.com");
-        Assume.assumeTrue(
-                "Skipping UI scenario because the HapifyMe host cannot be resolved: " + Configuration.baseUrl,
-                EnvironmentChecks.baseUrlHostCanResolve(Configuration.baseUrl)
-        );
+        Configuration.baseUrl = System.getProperty("hapifyme.baseUrl", "https://apps.qualiadept.eu/hapifyme");
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10_000;
         Configuration.reportsFolder = "target/selenide-reports";
