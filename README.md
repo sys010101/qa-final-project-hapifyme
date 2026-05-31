@@ -64,9 +64,7 @@ It uploads these artifacts even when a test fails:
 
 ## Green Pipeline Screenshot
 
-Replace the placeholder below with the real green GitHub Actions screenshot after the first successful run.
-
-![Green GitHub Actions pipeline](docs/screenshots/pipeline-green.svg)
+![Green GitHub Actions pipeline](docs/screenshots/pipeline-green.png)
 
 ## Interesting Test Implemented
 
