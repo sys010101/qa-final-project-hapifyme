@@ -1,0 +1,51 @@
+name: HapifyMe Final Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Run Maven tests
+        run: mvn -B test --no-transfer-progress -Dhapifyme.baseUrl=https://test.hapifyme.com -Dselenide.headless=true
+
+      - name: Upload Surefire reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
+          if-no-files-found: ignore
+
+      - name: Upload Cucumber report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: |
+            target/cucumber-report.html
+            target/cucumber-report.json
+          if-no-files-found: ignore
+
+      - name: Upload Selenide screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenide-reports
+          path: target/selenide-reports/
+          if-no-files-found: ignore

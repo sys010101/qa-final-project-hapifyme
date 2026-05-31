@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Actions pipeline green screenshot placeholder</title>
+  <desc id="desc">Replace this placeholder with the real green GitHub Actions screenshot after the first successful run.</desc>
+  <rect width="960" height="540" fill="#0d1117"/>
+  <rect x="64" y="64" width="832" height="412" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="96" y="122" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="30" font-weight="700">HapifyMe Final Tests</text>
+  <circle cx="115" cy="188" r="13" fill="#2ea043"/>
+  <text x="145" y="197" fill="#3fb950" font-family="Arial, sans-serif" font-size="24" font-weight="700">Pipeline passed</text>
+  <text x="96" y="260" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20">Repository: sys010101/qa-final-project-hapifyme</text>
+  <text x="96" y="306" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20">Workflow: .github/workflows/test.yml</text>
+  <text x="96" y="352" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20">Command: mvn -B test</text>
+  <text x="96" y="424" fill="#8b949e" font-family="Arial, sans-serif" font-size="16">TODO: replace this file with the real green Actions screenshot before final LMS submission.</text>
+</svg>
