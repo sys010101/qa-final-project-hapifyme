@@ -22,7 +22,7 @@ jobs:
           cache: maven
 
       - name: Run Maven tests
-        run: mvn -B test --no-transfer-progress -Dhapifyme.baseUrl=https://test.hapifyme.com -Dselenide.headless=true
+        run: mvn -B test --no-transfer-progress -Dhapifyme.baseUrl=https://apps.qualiadept.eu/hapifyme -Dselenide.headless=true
 
       - name: Upload Surefire reports
         if: always()
